@@ -1,3 +1,6 @@
 name = "lifetimesoft-web"
 main = "src/index.tsx"
 compatibility_date = "2025-01-07"
+
+[assets]
+directory = "./public"

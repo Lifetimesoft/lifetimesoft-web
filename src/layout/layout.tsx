@@ -43,8 +43,8 @@ export const Layout = (
 
             <link type="image/x-icon" href={CONST.STATIC_PATH + '/img/favicon.ico'} rel="shortcut icon"/>
 
-            <script src="https://cdn.tailwindcss.com"></script>
-            <script defer src={"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"}></script>
+            <link rel="stylesheet" href="/css/style.css"/>
+            <script defer src="/js/alpine.js"></script>
         </head>
         <body>
         <div className="body min-h-screen">
