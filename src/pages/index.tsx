@@ -31,6 +31,48 @@ export const Index = ({ lang }: { lang: Lang }) => {
                 </div>
             </div>
 
+            {/* Developer Resources */}
+            <div className="max-w-[85rem] w-full mx-auto px-4 mt-20">
+                <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">{lang === 'th' ? 'แหล่งข้อมูลสำหรับนักพัฒนา' : 'Developer Resources'}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    {/* General Docs */}
+                    <a href={`https://docs.lifetimesoft.com/?lang=${lang}`} target="_blank" rel="noopener noreferrer"
+                       className="flex flex-col items-center p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-green-300 transition-all group">
+                        <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-100 group-hover:scale-110 transition-all duration-300">
+                            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-2">{lang === 'th' ? 'เอกสารการใช้งาน' : 'Documentation'}</h3>
+                        <p className="text-sm text-gray-500 text-center leading-relaxed">{lang === 'th' ? 'คู่มือ วิธีการใช้งาน และ API Reference ทั้งหมดของแพลตฟอร์ม' : 'Complete guides, tutorials, and API references'}</p>
+                    </a>
+
+                    {/* CLI Docs */}
+                    <a href="https://docs.lifetimesoft.com/cli?lang=en" target="_blank" rel="noopener noreferrer"
+                       className="flex flex-col items-center p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-green-300 transition-all group">
+                        <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-100 group-hover:scale-110 transition-all duration-300">
+                            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-2">{lang === 'th' ? 'เอกสาร CLI' : 'CLI Documentation'}</h3>
+                        <p className="text-sm text-gray-500 text-center leading-relaxed">{lang === 'th' ? 'เครื่องมือ Command Line สำหรับจัดการโปรเจกต์ผ่านเทอร์มินัล' : 'Command line tools to manage your projects directly from terminal'}</p>
+                    </a>
+
+                    {/* Registry Agent */}
+                    <a href="https://registry.lifetimesoft.com/" target="_blank" rel="noopener noreferrer"
+                       className="flex flex-col items-center p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:border-green-300 transition-all group">
+                        <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mb-6 group-hover:bg-green-100 group-hover:scale-110 transition-all duration-300">
+                            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-2">{lang === 'th' ? 'Registry Agent' : 'Agent Registry'}</h3>
+                        <p className="text-sm text-gray-500 text-center leading-relaxed">{lang === 'th' ? 'ค้นหาและจัดการ Agent ต่างๆ ที่มีอยู่บนระบบของเรา' : 'Discover and manage available agents for your architecture'}</p>
+                    </a>
+                </div>
+            </div>
+
             {/* Features */}
             <div className="max-w-[85rem] w-full mx-auto px-4 mt-20">
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">{tr.featuresTitle}</h2>
@@ -89,7 +131,7 @@ export const Index = ({ lang }: { lang: Lang }) => {
             {/* Social Links */}
             <div className="max-w-[85rem] w-full mx-auto px-4 mt-20 mb-8">
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">{tr.socialTitle}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
                     <a href="https://www.youtube.com/@LifeTimeSoft" target="_blank" rel="noopener noreferrer"
                        className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-red-200 transition-all group">
                         <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-red-100 transition-colors">
@@ -126,6 +168,19 @@ export const Index = ({ lang }: { lang: Lang }) => {
                         <div>
                             <div className="font-semibold text-gray-800">TikTok</div>
                             <div className="text-sm text-gray-400">@lifetimesoftservice</div>
+                        </div>
+                    </a>
+
+                    <a href="https://x.com/lifetimesoftctl" target="_blank" rel="noopener noreferrer"
+                       className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-400 transition-all group">
+                        <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center shrink-0 group-hover:bg-gray-200 transition-colors">
+                            <svg className="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div className="font-semibold text-gray-800">X (Twitter)</div>
+                            <div className="text-sm text-gray-400">@lifetimesoftctl</div>
                         </div>
                     </a>
                 </div>

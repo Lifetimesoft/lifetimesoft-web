@@ -1,4 +1,4 @@
-import {Lang, t} from "../model/i18n";
+import { Lang, t } from "../model/i18n";
 
 export const Footer = ({ lang }: { lang: Lang }) => {
     const tr = t(lang)
